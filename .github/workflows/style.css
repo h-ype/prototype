@@ -1,6 +1,0 @@
-@import url("normalize.css");
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
-
-body {background-color: var(--oc-gray-1); }
-main {max-width: 640px; width: 100%; min-height: 100vh; margin: 0 auto; background: #fff; padding: 16px; box-sizing: border-box; box-shadow: 7px 7px 7px var(--oc-gray-2);}
-main h1 {text-align: center;}
