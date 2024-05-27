@@ -11,7 +11,7 @@
     
   <script>
     $( function() {
-      var handle = $( "#custom-handle" );
+      var handle = $( "#custom-handle_1" );
       $( "#slider_1" ).slider({
         orientation: "vertical",
         range: "min",
@@ -25,30 +25,98 @@
           handle.text( 100 - ui.value);
         }
       });
+      var handle2 = $( "#custom-handle_2" );
+      $( "#slider_2" ).slider({
+        orientation: "vertical",
+        range: "min",
+        min: 0,
+        max: 100,
+        create: function() {
+          handle2.text( 100 );
+        },
+        slide: function( event, ui ) {
+            $("#amount").val(100 - ui.value);
+          handle2.text( 100 - ui.value);
+        }
+      });
+      var handle3 = $( "#custom-handle_3" );
+      $( "#slider_3" ).slider({
+        orientation: "vertical",
+        range: "min",
+        min: 0,
+        max: 100,
+        create: function() {
+          handle3.text( 100 );
+        },
+        slide: function( event, ui ) {
+            $("#amount").val(100 - ui.value);
+          handle3.text( 100 - ui.value);
+        }
+      });
+
+      $('[name="set"]').change(function(){
+        
+   if ( this.value === 'set1' ) {
+        $(".set").removeClass("on");
+        $(".set1").addClass("on");
+   } else if ( this.value === 'set2' ) {
+        $(".set").removeClass("on");
+        $(".set2").addClass("on");
+   }  else if ( this.value === 'set3' ) {
+        $(".set").removeClass("on");
+        $(".set3").addClass("on");
+   }  
+      });
+
     } );
     </script>
 </head>
 <body>
     <main>
+        <h1>내 키에 어디까지 🤔</h1>
 
-        <h1>내 키에 어디까지</h1>
-        <select name="" id="">
-            <option value="">160cm</option>
-            <option value="">161cm</option>
-        </select>
-        <input type="radio" name="set" id="set1" checked> <label for="set1">원피스</label>
-        <input type="radio" name="set" id="set2"> <label for="set2">자켓</label>
-        <input type="radio" name="set" id="set3"> <label for="set3">스커트</label>
+      
+        <div>
+        <dl>
+          <dd>키</dd>
+          <dt>
+            <select name="" id="">
+                <option value="">160cm</option>
+            </select>
+          </dt>
+        </dl>
+        <dl>
+        
+        <dd>종류</dd>
+        <dt>
+          <input type="radio" name="set" value="set1" id="set1" checked > <label for="set1">원피스</label>
+          <input type="radio" name="set" value="set2" id="set2"> <label for="set2">자켓</label>
+          <input type="radio" name="set" value="set3" id="set3"> <label for="set3">스커트</label>
+        </dt>
+      </dl>
     
-        <div>
+          <div class="set set1 on">
+            <figure></figure>
             <div id="slider_1">
-                <div id="custom-handle" class="ui-slider-handle"></div>
+              <div id="custom-handle_1" class="ui-slider-handle"></div>
             </div>
+          </div>
+          <div class="set set2">
+            <div id="slider_2">
+              <div id="custom-handle_2" class="ui-slider-handle"></div>
+            </div>
+          </div>
+          <div class="set set3">
+            <div id="slider_3">
+              <div id="custom-handle_3" class="ui-slider-handle"></div>
+            </div>
+          </div>
+
         </div>
 
-        <div>
-            * 사이즈코리아의 한국인 체형 분류의 표준 인체치수를 적용하여 만들었습니다.
-        </div>
+        <p class="info">
+          * 사이즈코리아의 한국인 체형 분류의 표준 인체치수를 적용하여 만들었습니다.
+      </p>
     </main>
 
 </body>
