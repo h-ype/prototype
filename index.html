@@ -17,14 +17,14 @@
         orientation: "vertical",
         range: "max",
         value: 100,
-        min: 80,
-        max: 140,
+        min: 70,
+        max: 110,
         create: function() {
-          handle.text( 120 ); 
+          handle.text( 80 ); 
         },
         slide: function( event, ui ) {
-          var revNum = 220 - ui.value;
-          var perNum = revNum*1.9;
+          var revNum = 180 - ui.value;
+          var perNum = revNum*3.2;
           $('.bar1').css('margin-top', perNum );
           $("#amount1").text( revNum  + "cm");
           handle.text( revNum );
@@ -35,14 +35,14 @@
         orientation: "vertical",
         range: "min",
         value: 60,
-        min: 0,
-        max: 100,
+        min: 35,
+        max: 110,
         create: function() {
           handle2.text( 100 );
         },
         slide: function( event, ui ) {
-          var revNum = 220 - ui.value;
-          var perNum = revNum*1.9;
+          var revNum = 145 - ui.value;
+          var perNum = revNum*2.6;
           $('.bar2').css('margin-top', perNum );
           $("#amount2").text( revNum  + "cm");
           handle2.text( revNum );
@@ -110,12 +110,12 @@
     
           <div class="set set1 on">
             <div class="staticBar"></div>
-            <div class="bar bar1">
-              <p id="amount1" class="amount">120cm</p>
+            <div class="bar bar1" >
+              <p id="amount1" class="amount">80cm</p>
             </div>
             <ul>
-              <li>최소 80</li>
-              <li>최대 140</li>
+              <li>최소 70</li>
+              <li>최대 110</li>
             </ul>
             <div id="slider_1" class="sliderSet">
               <div id="custom-handle_1" class="ui-slider-handle"></div>
@@ -128,7 +128,7 @@
             </div>
             <ul>
               <li>최소 35</li>
-              <li>최대 140</li>
+              <li>최대 110</li>
             </ul>
             <div id="slider_2" class="sliderSet">
               <div id="custom-handle_2" class="ui-slider-handle"></div>
