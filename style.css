@@ -14,23 +14,25 @@ main dl dt label {padding-right: 13px;}
 
 .set { display: none;}
 .set.on {display: block; background-image: url('11.svg'); background-repeat: no-repeat; background-position: center top; min-height: 400px; margin-top: 60px; position: relative;}
-.set.on .sliderSet {position: absolute; right: 30px; height: 280px; margin-top: 50px;}
+.set.on .sliderSet {position: absolute; right: 16px; height: 280px; margin-top: 50px; z-index: 9999;}
 .set.on .ui-slider-handle {width: 40px; text-align: center; height: 24px; line-height: 24px; left: -14px;}
 
 p.info {background-color: var(--oc-gray-1); padding: 32px; font-size: 15px; line-height: 1.3rem;}
 
-.staticBar {position: absolute; border-top:2px dashed #222; width: 160px; left: 32%;}
+.staticBar {position: absolute; border-top:2px dashed red; width: 160px; left: 32%;}
+.set1 .staticBar,
+.set2 .staticBar {top: 63px;}
 .set3 .staticBar {top: 160px;}
 
 .bar {position: absolute; border-top:2px dashed #222; width: 160px; left: 32%; top: 80px;}
 .bar .amount {position: absolute; right: 0; top: -40px;}
 
 .bar.bar1 {margin-top: 228px;}
-.bar.bar2 {margin-top: 228px; }
-.bar.bar3 {margin-top: 228px;top: 50px;}
+.bar.bar2 {margin-top: 228px; top: 63px;}
+.bar.bar3 {margin-top: 138px; top: 160px;}
 
-.set ul {position: absolute; right: 66px; top: 34px; text-align: right; font-size: 13px;}
+.set ul {position: absolute; right: 3px; top: 5px; text-align: center; font-size: 12px; color: var(--oc-gray-6);}
 .set ul li {list-style: none;}
-.set ul li:last-child {margin-top: 259px;}
+.set ul li:last-child {margin-top: 312px;}
 
 .ui-slider-handle {font-family: "Pretendard Variable", Pretendard, -apple-system; font-weight: 800;}

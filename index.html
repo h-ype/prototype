@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
     
   <script>
     $( function() {
@@ -51,14 +52,15 @@
       $( "#slider_3" ).slider({
         orientation: "vertical",
         range: "min",
-        min: 0,
-        max: 100,
+        value: 60,
+        min: 28,
+        max: 90,
         create: function() {
-          handle3.text( 100 );
+          handle3.text( 60 );
         },
         slide: function( event, ui ) {
-          var revNum = 220 - ui.value;
-          var perNum = revNum*1.2;
+          var revNum = 118 - ui.value;
+          var perNum = revNum*2.3;
           $('.bar3').css('margin-top', perNum );
           $("#amount3").text( revNum  + "cm");
           handle3.text( revNum );
@@ -107,6 +109,7 @@
       </dl>
     
           <div class="set set1 on">
+            <div class="staticBar"></div>
             <div class="bar bar1">
               <p id="amount1" class="amount">120cm</p>
             </div>
@@ -119,8 +122,9 @@
             </div>
           </div>
           <div class="set set2">
+            <div class="staticBar"></div>
             <div class="bar bar2">
-              <p id="amount2" class="amount">120cm</p>
+              <p id="amount2" class="amount">100cm</p>
             </div>
             <ul>
               <li>최소 35</li>
@@ -133,7 +137,7 @@
           <div class="set set3">
             <div class="staticBar"></div>
             <div class="bar bar3">
-              <p id="amount3" class="amount">120cm</p>
+              <p id="amount3" class="amount">60cm</p>
             </div>
             <ul>
               <li>최소 28</li>
