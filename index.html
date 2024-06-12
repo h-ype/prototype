@@ -35,13 +35,13 @@
         orientation: "vertical",
         range: "min",
         value: 60,
-        min: 35,
+        min: 45,
         max: 115,
         create: function() {
           handle2.text( 100 );
         },
         slide: function( event, ui ) {
-          var revNum = 150 - ui.value;
+          var revNum = 160 - ui.value;
           var perNum = revNum*3.15;
           $('.bar2').css('margin-top', perNum );
           $("#amount2").text( revNum  + "cm");
@@ -127,7 +127,7 @@
               <p id="amount2" class="amount">100cm</p>
             </div>
             <ul>
-              <li>최소 35</li>
+              <li>최소 45</li>
               <li>최대 115</li>
             </ul>
             <div id="slider_2" class="sliderSet">
